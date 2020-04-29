@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ae9f664c-6ce4-4e68-975a-4638599b600f" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/psr/http-factory" />
+      <path value="$PROJECT_DIR$/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/vendor/league/route" />
+      <path value="$PROJECT_DIR$/vendor/phpoption/phpoption" />
+      <path value="$PROJECT_DIR$/vendor/league/container" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/vendor/nikic/fast-route" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-server-middleware" />
+      <path value="$PROJECT_DIR$/vendor/vlucas/phpdotenv" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-server-handler" />
+      <path value="$PROJECT_DIR$/vendor/laminas/laminas-zendframework-bridge" />
+      <path value="$PROJECT_DIR$/vendor/laminas/laminas-diactoros" />
+      <path value="$PROJECT_DIR$/vendor/laminas/laminas-httphandlerrunner" />
+      <path value="$PROJECT_DIR$/vendor/twig/twig" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/vendor/symfony/var-dumper" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/reflection" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/annotations" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/event-manager" />
+      <path value="$PROJECT_DIR$/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php73" />
+      <path value="$PROJECT_DIR$/vendor/ocramius/package-versions" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/collections" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/orm" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/persistence" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/common" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/vendor/symfony/asset" />
+      <path value="$PROJECT_DIR$/vendor/vlucas/valitron" />
+      <path value="$PROJECT_DIR$/vendor/paragonie/random_compat" />
+      <path value="$PROJECT_DIR$/vendor/container-interop/container-interop" />
+      <path value="$PROJECT_DIR$/vendor/laminas/laminas-crypt" />
+      <path value="$PROJECT_DIR$/vendor/laminas/laminas-stdlib" />
+      <path value="$PROJECT_DIR$/vendor/laminas/laminas-math" />
+    </include_path>
+  </component>
+  <component name="ProjectId" id="1aEHAfabXJNzuTqrJ6MCmMaE5NV" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
+    <property name="typescript.add.unambiguous.imports.on.the.fly" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\OSpanel\OSPanel\domains\noframe\app" />
+      <recent name="D:\OSpanel\OSPanel\domains\noframe\app\Http" />
+      <recent name="D:\OSpanel\OSPanel\domains\noframe\app\Security\Auth" />
+      <recent name="D:\OSpanel\OSPanel\domains\noframe\app\Security\Hashing" />
+    </key>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ae9f664c-6ce4-4e68-975a-4638599b600f" name="Default Changelist" comment="" />
+      <created>1586293690632</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1586293690632</updated>
+      <workItem from="1586293693376" duration="5827000" />
+      <workItem from="1586345401472" duration="1510000" />
+      <workItem from="1586432709356" duration="11441000" />
+      <workItem from="1586521745342" duration="105000" />
+      <workItem from="1586542756344" duration="4755000" />
+      <workItem from="1586549204530" duration="3075000" />
+      <workItem from="1586865102626" duration="906000" />
+      <workItem from="1586902225142" duration="628000" />
+      <workItem from="1586955542515" duration="2693000" />
+      <workItem from="1586982302537" duration="6679000" />
+      <workItem from="1587068474462" duration="2081000" />
+      <workItem from="1587155399307" duration="2955000" />
+      <workItem from="1587201825184" duration="601000" />
+      <workItem from="1587222665758" duration="598000" />
+      <workItem from="1587236133501" duration="6485000" />
+      <workItem from="1587311451484" duration="2972000" />
+      <workItem from="1587318916816" duration="1256000" />
+      <workItem from="1587321726720" duration="4190000" />
+      <workItem from="1587399757656" duration="2554000" />
+      <workItem from="1587469417082" duration="2151000" />
+      <workItem from="1587568078314" duration="1327000" />
+      <workItem from="1587583561310" duration="1962000" />
+      <workItem from="1587585637143" duration="533000" />
+      <workItem from="1587586318544" duration="37000" />
+      <workItem from="1587586515940" duration="1705000" />
+      <workItem from="1587640835546" duration="14163000" />
+      <workItem from="1587737466835" duration="5588000" />
+      <workItem from="1587755414794" duration="4670000" />
+      <workItem from="1587853872605" duration="3089000" />
+      <workItem from="1587925014249" duration="7794000" />
+      <workItem from="1588013565362" duration="3044000" />
+      <workItem from="1588080911649" duration="11014000" />
+      <workItem from="1588160882772" duration="1907000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="513" y="203" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1586958064404">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="513" y="203" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1586958064404" />
+    <state x="572" y="82" key="#com.intellij.ide.util.MemberChooser" timestamp="1586300024591">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="572" y="82" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1586300024591" />
+    <state x="523" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1588103728258">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="523" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1588103728258" />
+    <state x="549" y="168" key="FileChooserDialogImpl" timestamp="1587570063627">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="168" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1587570063627" />
+    <state x="538" y="212" key="NewPhpClassDialog" timestamp="1588162415064">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="538" y="212" key="NewPhpClassDialog/0.0.1536.824@0.0.1536.824" timestamp="1588162415064" />
+    <state x="604" y="333" key="NewPhpFileDialog" timestamp="1587649868421">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="604" y="333" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1587649868421" />
+    <state x="277" y="56" key="SettingsEditor" timestamp="1587650523769">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="277" y="56" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1587650523769" />
+    <state x="444" y="238" key="com.intellij.ide.util.TipDialog" timestamp="1588160897334">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="444" y="238" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1588160897334" />
+    <state x="491" y="91" key="com.jetbrains.php.test.PhpNewTestDialog" timestamp="1586299967798">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="491" y="91" key="com.jetbrains.php.test.PhpNewTestDialog/0.0.1536.824@0.0.1536.824" timestamp="1586299967798" />
+    <state x="510" y="40" key="refactoring.ChangeSignatureDialog" timestamp="1586295797734">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="510" y="40" key="refactoring.ChangeSignatureDialog/0.0.1536.824@0.0.1536.824" timestamp="1586295797734" />
+    <state x="425" y="187" key="run.anything.popup" timestamp="1587236636051">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1587236636051" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1588016033741">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1588016033741" />
+  </component>
+</project>
