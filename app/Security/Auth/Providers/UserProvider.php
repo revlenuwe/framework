@@ -8,7 +8,7 @@ interface UserProvider
 {
     public function retrieveById($id);
 
-    public function retrieveByToken($id);
+    public function retrieveByIdentifier($identifier);
 
     public function retrieveByUsername($name,$username);
 }

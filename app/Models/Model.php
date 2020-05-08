@@ -18,4 +18,18 @@ abstract class Model
         }
         return false;
     }
+
+    public function create($columns){
+        $this->fill($columns);
+    }
+
+    public function update($columns){
+        $this->fill($columns);
+    }
+
+    protected function fill(array $columns){
+        foreach($columns as $column => $value){
+            $this->$column = $value;
+        }
+    }
 }

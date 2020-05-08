@@ -24,20 +24,50 @@ class __TwigTemplate_575c8f9770de7f395d776e87a7a194447769780b1f21aaf7b5b7d7dd308
 
         $this->source = $this->getSourceContext();
 
-        $this->parent = false;
-
         $this->blocks = [
+            'content' => [$this, 'block_content'],
         ];
+    }
+
+    protected function doGetParent(array $context)
+    {
+        // line 1
+        return "layouts/app.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = [])
     {
         $macros = $this->macros;
-        // line 1
-        echo "dfds
+        $this->parent = $this->loadTemplate("layouts/app.twig", "index.twig", 1);
+        $this->parent->display($context, array_merge($this->blocks, $blocks));
+    }
+
+    // line 3
+    public function block_content($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        // line 4
+        echo "    <div class=\"row\">
+        <!-- Start col -->
+        <div class=\"col-lg-12\">
+            <div class=\"card m-b-30\">
+                <div class=\"card-header\">
+                    <h5 class=\"card-title\">Order Confirmed</h5>
+                </div>
+                <div class=\"card-body\">
+                    <div class=\"row justify-content-center\">
+                        <div class=\"col-lg-4\">
+                            <div class=\"pt-5 text-center my-5\">
+                                <h2 class=\"text-success\">Welcome</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End col -->
+    </div>
 ";
-        // line 2
-        echo twig_escape_filter($this->env, twig_var_dump($this->env, $context, ...[0 => twig_get_attribute($this->env, $this->source, ($context["auth"] ?? null), "check", [], "any", false, false, false, 2)]), "html", null, true);
     }
 
     public function getTemplateName()
@@ -52,12 +82,34 @@ class __TwigTemplate_575c8f9770de7f395d776e87a7a194447769780b1f21aaf7b5b7d7dd308
 
     public function getDebugInfo()
     {
-        return array (  40 => 2,  37 => 1,);
+        return array (  50 => 4,  46 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("dfds
-{{ dump(auth.check) }}", "index.twig", "D:\\OSpanel\\OSPanel\\domains\\noframe\\views\\index.twig");
+        return new Source("{% extends \"layouts/app.twig\" %}
+
+{% block content %}
+    <div class=\"row\">
+        <!-- Start col -->
+        <div class=\"col-lg-12\">
+            <div class=\"card m-b-30\">
+                <div class=\"card-header\">
+                    <h5 class=\"card-title\">Order Confirmed</h5>
+                </div>
+                <div class=\"card-body\">
+                    <div class=\"row justify-content-center\">
+                        <div class=\"col-lg-4\">
+                            <div class=\"pt-5 text-center my-5\">
+                                <h2 class=\"text-success\">Welcome</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End col -->
+    </div>
+{% endblock %}", "index.twig", "D:\\OSpanel\\OSPanel\\domains\\noframe\\views\\index.twig");
     }
 }

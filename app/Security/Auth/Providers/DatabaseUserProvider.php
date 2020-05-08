@@ -4,6 +4,7 @@
 namespace App\Security\Auth\Providers;
 
 
+use App\Models\Model;
 use App\Models\User;
 use Doctrine\ORM\EntityManager;
 
@@ -18,12 +19,20 @@ class DatabaseUserProvider implements UserProvider
         return $this->db->getRepository(User::class)->find($id);
     }
 
-    public function retrieveByToken($token){
-        return $this->db->getRepository(User::class)->findOneBy(['remember_token' => $token]);//update
+    public function retrieveByIdentifier($identifier) {
+        return $this->db->getRepository(User::class)->findOneBy(['remember_identifier' => $identifier]);
     }
 
     public function retrieveByUsername($name,$username){
-        return $this->db->getRepository(User::class)->findOneBy([$name => $username]);//update
+        return $this->db->getRepository(User::class)->findOneBy([$name => $username]);
+    }
+
+    public function clearUserRememberData($user){
+        $this->retrieveById($user->id)->update([
+            'remember_identifier' => null,
+            'remember_token' => null
+        ]);
+        $this->db->flush();
     }
 
 }

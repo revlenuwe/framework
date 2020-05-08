@@ -26,7 +26,6 @@ class AppController extends Controller
 
 
     public function index($request){
-        dump($this->route);
         return $this->view->render($this->response,'index.twig',[
             'user' => $this->auth->user()
         ]);

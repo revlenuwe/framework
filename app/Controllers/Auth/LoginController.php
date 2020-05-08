@@ -38,7 +38,6 @@ class LoginController extends Controller
             $this->flash->add('error','Login error');
             return redirect($request->getUri()->getPath());
         }
-
         return redirect($this->route->getNamedRoute('index')->getPath());
     }
 

@@ -4,6 +4,9 @@
 namespace App\Security\Auth;
 
 
+use App\Cookie\Cookie;
+use App\Models\User;
+use Doctrine\ORM\EntityManager;
 use Exception;
 use App\Requests\ValidateRequest;
 use App\Security\Auth\Providers\UserProvider;
@@ -14,14 +17,21 @@ class Auth
 {
     use ValidateRequest;
 
+    protected $provider;
     protected $user;
+    protected $db;
     protected $hash;
     protected $session;
+    protected $recaller;
+    protected $cookie;
 
-    public function __construct(UserProvider $user,Bcrypt $hash,SessionStorage $session){
-        $this->user = $user;
+    public function __construct(UserProvider $provider,EntityManager $db,Bcrypt $hash,SessionStorage $session,Recaller $recaller,Cookie $cookie){
+        $this->provider = $provider;
+        $this->db = $db;
         $this->hash = $hash;
         $this->session = $session;
+        $this->recaller = $recaller;
+        $this->cookie = $cookie;
     }
 
     public function username(){
@@ -32,6 +42,10 @@ class Auth
         return 'id';
     }
 
+    public function rememberKey(){
+        return 'remember_token';
+    }
+
     public function attempt($request){
         $credentials = $this->validateRequest($request);
         $user = $this->getUser($credentials[$this->username()]);
@@ -39,6 +53,11 @@ class Auth
         if(!$user || !$this->validateCredentials($user,$credentials['password'])){
             return false;
         }
+
+        if(isset($request->getParsedBody()[$this->rememberKey()])){
+            $this->setRememberToken($user);
+        }
+
         $this->setToSession($user);
 
         return true;
@@ -51,12 +70,35 @@ class Auth
         ]);
     }
 
+    public function hasRecaller(){
+        return $this->cookie->exists($this->rememberKey());
+    }
+
+    protected function setRememberToken($user){
+        list($identifier,$token) = $this->recaller->generate();
+
+        $this->cookie->forever(
+            'remember_token',
+            $this->recaller->generateValue($identifier,$token)
+        );
+
+        $this->updateRememberValues($user,$identifier,$token);
+    }
+
     public function validateCredentials($user,$password){
         return $this->hash->verify($password,$user->password);
     }
 
     public function getUser($username){
-        return $this->user->retrieveByUsername($this->username(),$username);
+        return $this->provider->retrieveByUsername($this->username(),$username);
+    }
+
+    protected function updateRememberValues($user,$identifier,$token){
+        $this->provider->retrieveById($user->id)->update([
+            'remember_identifier' => $identifier,
+            'remember_token' => $this->recaller->generateRememberTokenHash($token)
+        ]);
+        $this->db->flush();
     }
 
     public function isInSession(){
@@ -64,14 +106,36 @@ class Auth
     }
 
     public function setFromSession(){
-        $user = $this->user->retrieveById(
+        $user = $this->provider->retrieveById(
             $this->session->get($this->authenticateKey())
         );
 
         if(!$user){
             throw new Exception;
         }
-        $this->user = $user;
+        $this->provider = $user;
+    }
+
+    public function setFromCookie(){
+        $hash = $this->cookie->get($this->rememberKey());
+
+        $user = $this->provider->retrieveByIdentifier(
+            $this->recaller->identifier($hash)
+        );
+
+        if(!$user){
+            $this->cookie->remove($this->rememberKey());
+            return;
+        }
+
+        if(!$this->recaller->validateToken($this->recaller->token($hash),$user->remember_token)){
+            $this->provider->clearUserRememberData($user);
+
+            $this->cookie->remove($this->rememberKey());
+            throw new Exception();
+        }
+
+        $this->setToSession($user);
     }
 
     protected function setToSession($user){
@@ -84,6 +148,10 @@ class Auth
 
     public function check(){
         return $this->isInSession();
+    }
+
+    public function logout(){
+
     }
 
 
